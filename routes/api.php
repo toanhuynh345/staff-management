@@ -24,7 +24,7 @@ Route::namespace('Api\V1')->prefix('v1')->name('api.v1.')->group(function () {
         Route::post('change-password', 'AuthController@changePassword')->name('change.password');
         Route::post('/logout', 'AuthController@logout')->name('logout');
 
-        Route::middleware(['role:super-admin'])->group(function() {
+        Route::group([], function() {
             Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
                 Route::get('/', 'UserController@index')->name('list');
                 Route::post('/', 'UserController@store')->name('store');

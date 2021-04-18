@@ -30,7 +30,7 @@ abstract class BaseRepository implements RepositoryInterface
     {
         $list = $this->model;
         $limit = $data['limit'] ?? LIMIT_PAGE;
-        $pagination = filter_var($data['pagination'], FILTER_VALIDATE_BOOLEAN);
+        $pagination = filter_var($data['pagination'] ?? false, FILTER_VALIDATE_BOOLEAN);
         if ($pagination) {
             return $list->paginate($limit);
         }
