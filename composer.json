@@ -15,7 +15,9 @@
         "laravel/framework": "^8.12",
         "laravel/passport": "^10.1",
         "laravel/socialite": "^5.1",
+        "laravel/telescope": "^4.4",
         "laravel/tinker": "^2.5",
+        "phpunit/php-code-coverage": "^9.2",
         "spatie/laravel-permission": "^4.0"
     },
     "require-dev": {

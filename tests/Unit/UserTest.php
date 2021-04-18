@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class UserTest extends TestCase
 {
@@ -11,8 +11,22 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    /**
+     * @test
+     * Test login
+     */
+    public function test_login_user()
     {
-        $this->assertTrue(true);
+        //Create user
+        //attempt login
+        $response = $this->json('POST',route('api.v1.login'),[
+            'email' => 'superadmin@demo.dev',
+            'password' => '123456',
+        ]);
+        //Assert it was successful and a token was received
+        $response->assertStatus(200);
+        $result = $response->json();
+        $this->assertArrayHasKey('token',[ 'token' => $result['data']['access_token']]);
     }
+
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="2" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="0.163179">
+    <testsuite name="Unit" tests="2" assertions="1" errors="1" warnings="0" failures="0" skipped="0" time="0.163179">
+      <testsuite name="Tests\Unit\ExampleTest" file="/var/www/staff-management/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.057688">
+        <testcase name="testBasicTest" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="/var/www/staff-management/tests/Unit/ExampleTest.php" line="14" assertions="1" time="0.057688"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\UserTest" file="/var/www/staff-management/tests/Unit/UserTest.php" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="0.105491">
+        <testcase name="test_login_user" class="Tests\Unit\UserTest" classname="Tests.Unit.UserTest" file="/var/www/staff-management/tests/Unit/UserTest.php" line="20" assertions="0" time="0.105491">
+          <error type="RuntimeException">Tests\Unit\UserTest::test_login_user
+RuntimeException: A facade root has not been set.
+
+/var/www/staff-management/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:258
+/var/www/staff-management/tests/Unit/UserTest.php:26</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

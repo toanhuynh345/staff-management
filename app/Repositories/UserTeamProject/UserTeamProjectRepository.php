@@ -1,5 +1,5 @@
 <?php
-namespace App\Repositories\User;
+namespace App\Repositories\UserTeamProject;
 
 use App\Repositories\BaseRepository;
 
