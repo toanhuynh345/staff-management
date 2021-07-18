@@ -2,5 +2,6 @@
 return [
     'token' => 'Token',
     'success' => 'Success',
-    'fail' => 'fail'
+    'fail' => 'fail',
+    'home' => 'Home'
 ];

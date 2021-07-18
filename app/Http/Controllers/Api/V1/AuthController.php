@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\ProfileRequest;
-use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 

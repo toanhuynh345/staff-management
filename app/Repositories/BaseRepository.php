@@ -39,9 +39,7 @@ abstract class BaseRepository implements RepositoryInterface
 
     public function find($id)
     {
-        $result = $this->model->find($id);
-
-        return $result;
+        return $this->model->find($id);
     }
 
     public function create($attributes = [])
@@ -51,24 +49,21 @@ abstract class BaseRepository implements RepositoryInterface
 
     public function update($id, $attributes = [])
     {
-        $result = $this->find($id);
-        if ($result) {
-            $result->update($attributes);
-            return $result;
+        $model = $this->find($id);
+        if ($model) {
+            $model->update($attributes);
+            return $model;
         }
-
         return false;
     }
 
     public function delete($id)
     {
-        $result = $this->find($id);
-        if ($result) {
-            $result->delete();
-
+        $model = $this->find($id);
+        if ($model) {
+            $model->delete();
             return true;
         }
-
         return false;
     }
 }

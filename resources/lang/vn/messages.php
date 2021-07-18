@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'is_not_found' => ':item is not exist',
-    'data_not_found' => 'Data not found',
-    'create_account_success' => 'Created :item is successfully',
+    'is_not_found' => ':item không tồn tại',
+    'data_not_found' => 'Không tìm thấy dữ liệu.',
+    'create_account_success' => 'Tạo :item thành công',
     'create_record_success' => 'Created record successfully',
     'create_record_fail' => 'Created record failed',
     'invalid_credentails' => 'The password or email are not true. Please input again',

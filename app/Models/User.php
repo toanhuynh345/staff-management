@@ -18,6 +18,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $connection = 'mongodb';
+    protected $dateFormat = 'c';
+    protected $hidden = [
+        '_id',
+        'password',
+        'remember_token',
+    ];
     protected $fillable = [
         'name',
         'email',
@@ -26,15 +33,6 @@ class User extends Authenticatable
         'access_token'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
 
     /**
      * The attributes that should be cast to native types.
